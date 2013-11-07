@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+body {
+font-family: 'Lato', Arial, sans-serif;
+background: #3DB3E3;
+color:white;
+}
+
+.container {
+width: 500px;
+margin: 0 auto;
+}
+
+.menu {
+text-align: center;
+color:white;
+}
+
+header {
+text-align:center;
+}
+.apps {
+  position: relative;
+  background: white;
+  border: 1px solid black;
+  overflow: hidden;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+}
+.apps {
+min-height: 196px;
+overflow-y: auto;
+width: 320px;
+  
+}
+.hide {
+  display: none;
+}
+
+.apps ul {
+  background: #fff;
+  margin: 0;
+  padding: 28px;
+  width: 264px;
+  font-size: 0;
+}
+
+.apps ul li {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  width: 88px;
+  background: red;
+  line-height: 1.2;
+}
+
+.apps .more {
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  width: 320px;
+   background: #f5f5f5;
+cursor: pointer;
+height: 40px;
+overflow: hidden;
+position: absolute;
+}
+
+.apps.overflow .more {
+  
+  border-bottom: 1px solid #ebebeb;
+left: 28px;
+width: 264px;
+  height: 0;
+  cursor: default;
+height: 0;
+outline: none;
+ 
+}
+
+::-webkit-scrollbar-thumb {
+background-clip: padding-box;
+background-color: rgba(0,0,0,.3);
+border: 5px solid transparent;
+border-radius: 10px;
+min-height: 20px;
+min-width: 20px;
+height: 5px;
+width: 5px;
+  
+}
+
+::-webkit-scrollbar {
+height: 15px;
+width: 15px;
+}
+
+::-webkit-scrollbar-button {
+height: 0;
+width: 0;
+}
