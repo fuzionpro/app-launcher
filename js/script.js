@@ -36,4 +36,8 @@ $(document).ready(function(){
     $('.apps').css({maxHeight: $(window).height()});
   });
   
+  $(".button").click(function(){
+	$(".apps").toggle();
+  });
+  
 });
