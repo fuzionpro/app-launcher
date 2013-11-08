@@ -4,11 +4,13 @@ $(document).ready(function(){
 	  var launcherMaxHeight = 396;
 	  var launcherMinHeight = 296;
 	  
+	  // Mousewheel event handler to detect whether user has scrolled over the container
 	  $('.apps').bind('mousewheel', function(e){
 			if(e.originalEvent.wheelDelta /120 > 0) {
-			  
+			  // Scrolling up
 			}
 			else{
+				// Scrolling down
 				if(!scroll){
 					$(".second-set").show();
 					$('.apps').css({height: launcherMinHeight}).addClass('overflow');
@@ -18,7 +20,7 @@ $(document).ready(function(){
 			}
 		});
 	  
-	  
+	  // Scroll event to detect that scrollbar reached top of the container
 	  $('.apps').scroll(function(){
 		var pos=$(this).scrollTop();
 		if(pos == 0){
@@ -28,17 +30,20 @@ $(document).ready(function(){
 		}
 	  });
 	  
+	  // Click event handler to show more apps
 	  $('.apps .more').click(function(){
 		$(".second-set").show();
 		$(".apps").animate({ scrollTop: $('.apps')[0].scrollHeight}).css({height: 296}).addClass('overflow');
 	  });
 	  
-	  $(window).resize(function(){
-		$('.apps').css({maxHeight: $(window).height()});
-	  });
-	  
+	  // Click event handler to toggle dropdown
 	  $(".button").click(function(){
 		$(".app-launcher").toggle();
 	  });
   
+});
+
+// Resize event handler to maintain the max-height of the app launcher
+$(window).resize(function(){
+		$('.apps').css({maxHeight: $(window).height() - $('.apps').offset().top});
 });

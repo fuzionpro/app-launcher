@@ -59,6 +59,7 @@ header h1 {
 	overflow-y: auto;
 	width: 320px;
 	height: 396px;
+	margin-bottom: 30px;
 }
 
 .launcher .button {
