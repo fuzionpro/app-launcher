@@ -3,7 +3,7 @@ app-launcher
 
 Demo
 
-http://fuzionpro.com/demos/app-launcher/
+http://fuzionpro.com/demos/app-launcher/index.html
 
 Tutorial
 
